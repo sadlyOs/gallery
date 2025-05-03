@@ -80,7 +80,7 @@
     }
 
     .gallery__item:nth-child(1), .gallery__item:nth-child(3) {
-        transform: translate(-100px, 0);
+        transform: translate(50px, 0);
     }
 
     .gallery__item:nth-child(2), .gallery__item:nth-child(4) {
