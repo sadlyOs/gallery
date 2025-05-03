@@ -1,6 +1,6 @@
 const animationFields = {
     'simple-text': "animated",
-    'gallery__item': "gallery-animate"
+    'gallery__item': "gallery-animate",
 }
 
 function isElementInViewport(element) {
@@ -13,12 +13,14 @@ function isElementInViewport(element) {
     )
 }
 
-function animetedScroll() {
+function animetedScroll(event) {
     const elements = document.querySelectorAll('.check-anime');
+    console.log(elements);
+
+    console.log(window);
+
     elements.forEach(element => {
         if (isElementInViewport(element)) {
-            console.log(element.className);
-
             let name = element.className.split(' ')[0]
             element.classList.add(animationFields[name])
         }
