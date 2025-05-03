@@ -25,12 +25,20 @@ function animetedScroll() {
     })
 }
 
+
+function clickArrow(event) {
+    document.getElementById('gallery').style.display = "flex";
+    document.getElementById('collection').style.display = "none";
+    document.getElementById('gallery-text').textContent = "Gallery";
+    document.getElementById("line").style.display = "none";
+}
+
 function printPhoto(value) {
     let string = "";
     const valueText = value.innerText.toLowerCase()
     document.getElementById('gallery-text').textContent = value.innerText;
-    document.getElementById('gallery').classList.toggle("gallery-none");
-    document.getElementById('collection').classList.toggle("gallery-none")
+    document.getElementById('gallery').style.display = "none";
+    document.getElementById('collection').style.display = "grid"
     for (let index = 1; index <= 12; index++) {
         string += `<div class="collection">
                         <img src="./src/img/${valueText}/${valueText}${index}.jpg" alt="${valueText}">
@@ -39,11 +47,9 @@ function printPhoto(value) {
 
     document.getElementById("collection").innerHTML = string;
     document.getElementById("line").style.display = "block";
+    document.getElementById("line").addEventListener('click', clickArrow);
 }
 
-function clickArrow(event) {
-
-}
 
 document.addEventListener('DOMContentLoaded', () => {
     animetedScroll()

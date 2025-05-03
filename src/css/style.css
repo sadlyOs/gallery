@@ -446,6 +446,9 @@
   .gallery-none {
     display: none;
   }
+  .collection > img {
+    height: 100%;
+  }
   #line {
     display: none;
   }
