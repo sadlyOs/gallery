@@ -10,7 +10,7 @@
 <body>
     <div class="wrapper min-h-full">
         <header class="header w-full h-[100vh] text-white mb-[50px]  md:mb-[100px]">
-            <div class="header__container h-full container mx-auto py-[30px]">
+            <div class="header__container h-full container mx-auto py-[30px] px-[15px]">
                 <div class="header__top flex justify-between items-center">
                     <div class="header__left">
                         <a href="#"><img src="./src/img/space-ship.png" alt="space-ship" class="h-[8vh]"></a>
@@ -40,11 +40,14 @@
 
         <main class="main">
             <div class="col1 pb-[200px]">
-                <div class="col1__container container mx-auto text-white">
-                    <div class="simple-text col__header pb-[50px] check-anime opacity-0">
-                        <h2 class="text-black text-4xl md:text-6xl text-center font-bold">Gallery</h2>
+                <div class="col1__container container mx-auto text-white px-[15px]">
+                    <div class="simple-text col__header pb-[50px] check-anime opacity-0 relative">
+                        <h2 class="text-black text-4xl md:text-6xl text-center font-bold" id="gallery-text">Gallery</h2>
+                        <div class="w-[24px] h-[24px] absolute top-[20%] hover:cursor-pointer" id="line">
+                            <img src="./src/img/arrow.png" alt="arrow">
+                        </div>
                     </div>
-                    <div class="col1__gallery gallery flex flex-col lg:flex-row">
+                    <div class="col1__gallery gallery flex-col lg:flex-row" id="gallery">
                         <div class="gallery__item check-anime">
                             <img src="./src/img/galaktika.jpg" class="relative z-0" alt="galaktika">
                             <p>Galaktika</p>
@@ -61,6 +64,33 @@
                             <img src="./src/img/human.jpg" alt="">
                             <p>Human and Space</p>
                         </div>
+                    </div>
+                    <div class="col1__gallery-collections grid grid-cols-2 lg:grid-cols-4 gap-2 text-black" id="collection">
+                        <!-- <div class="collection">
+                            <img src="./src/img/galaktika/galaktika1.jpg" alt="galaktika">
+                        </div>
+                        <div class="collection">
+                            <img src="./src/img/galaktika/galaktika1.jpg" alt="galaktika">
+                        </div>
+                        <div class="collection">
+                            <img src="./src/img/galaktika/galaktika1.jpg" alt="galaktika">
+                        </div>
+                        <div class="collection">
+                            <img src="./src/img/galaktika/galaktika1.jpg" alt="galaktika">
+                        </div>
+                        <div class="collection">
+                            <img src="./src/img/galaktika/galaktika1.jpg" alt="galaktika">
+                        </div>
+                        <div class="collection">
+                            <img src="./src/img/galaktika/galaktika1.jpg" alt="galaktika">
+                        </div>
+                        <div class="collection">
+                            <img src="./src/img/galaktika/galaktika1.jpg" alt="galaktika">
+                        </div>
+                        <div class="collection">
+                            <img src="./src/img/galaktika/galaktika1.jpg" alt="galaktika">
+                        </div> -->
+
                     </div>
                 </div>
             </div>

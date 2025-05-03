@@ -16,6 +16,10 @@
         cursor: pointer;
     }
 
+    .gallery {
+        display: flex;
+    }
+
     .gallery__item {
         flex: 1 1 200px;
         position: relative;
@@ -113,4 +117,20 @@
             transform: translate(0, 0);
         }
     }
+
+    .gallery-none {
+        display: none;
+    }
+
+    #line {
+        display: none;
+    }
+    /* .collection {
+        width: 100%;
+    }
+
+    .collection img {
+        width: 100%;
+        object-fit: contain;
+    } */
 }

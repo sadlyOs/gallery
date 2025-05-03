@@ -9,6 +9,7 @@
       "Courier New", monospace;
     --color-black: #000;
     --color-white: #fff;
+    --spacing: 0.25rem;
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
@@ -172,8 +173,14 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
   .relative {
     position: relative;
+  }
+  .top-\[20\%\] {
+    top: 20%;
   }
   .z-0 {
     z-index: 0;
@@ -202,11 +209,20 @@
   .mb-\[50px\] {
     margin-bottom: 50px;
   }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .h-\[8vh\] {
     height: 8vh;
+  }
+  .h-\[24px\] {
+    height: 24px;
   }
   .h-\[100vh\] {
     height: 100vh;
@@ -217,8 +233,14 @@
   .min-h-full {
     min-height: 100%;
   }
+  .w-\[24px\] {
+    width: 24px;
+  }
   .w-full {
     width: 100%;
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -229,8 +251,14 @@
   .justify-between {
     justify-content: space-between;
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
   .gap-\[10px\] {
     gap: 10px;
+  }
+  .px-\[15px\] {
+    padding-inline: 15px;
   }
   .py-\[30px\] {
     padding-block: 30px;
@@ -275,6 +303,13 @@
   .opacity-0 {
     opacity: 0%;
   }
+  .hover\:cursor-pointer {
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
+      }
+    }
+  }
   .md\:mb-\[100px\] {
     @media (width >= 48rem) {
       margin-bottom: 100px;
@@ -295,6 +330,11 @@
     @media (width >= 48rem) {
       font-size: var(--text-7xl);
       line-height: var(--tw-leading, var(--text-7xl--line-height));
+    }
+  }
+  .lg\:grid-cols-4 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
   .lg\:flex-row {
@@ -320,6 +360,9 @@
   .menu__item:hover {
     color: gray;
     cursor: pointer;
+  }
+  .gallery {
+    display: flex;
   }
   .gallery__item {
     flex: 1 1 200px;
@@ -399,6 +442,12 @@
     .gallery-animate:nth-child(2), .gallery-animate:nth-child(4) {
       transform: translate(0, 0);
     }
+  }
+  .gallery-none {
+    display: none;
+  }
+  #line {
+    display: none;
   }
 }
 @property --tw-font-weight {
